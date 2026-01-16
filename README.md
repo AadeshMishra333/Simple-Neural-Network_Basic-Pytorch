@@ -1,99 +1,109 @@
-# Simple-Neural-Network_Basic-Pytorch
-This project demonstrates a basic NN made with pytorch and used to classfiy the MNIST dataset. This project helped me get an idea of the general NN pipeline and develop a footing into the world of deep learning.
+# 🧠 Simple-Neural-Network_Basic-Pytorch
 
-# Project Overview
-
-This project is my **first neural network implementation** and serves as a **proof of concept for mastering the PyTorch workflow**. It covers the complete pipeline of a neural network, including data loading, model architecture design, training loops, and evaluation.
+This project demonstrates a **basic neural network built using PyTorch** and trained to classify the **MNIST handwritten digits dataset** ✍️.  
+It helped me understand the **end-to-end neural network pipeline** and build a strong foundation in **deep learning** 🚀.
 
 ---
 
-## Dataset
+## 📌 Project Overview
+
+This project is my **first neural network implementation** and serves as a **proof of concept for mastering the PyTorch workflow**.  
+It covers the complete lifecycle of a neural network, including:
+
+- 📥 Data loading  
+- 🏗️ Model architecture design  
+- 🔁 Training loops  
+- 📊 Model evaluation  
+
+---
+
+## 📂 Dataset
 
 **MNIST**  
-- A large database of handwritten digits (**0–9**)
-- **Data Type:** Grayscale images  
-- **Image Size:** \(28 \times 28\) pixels  
-- **Input Features:** 784 (when flattened)
+- 🔢 Handwritten digits (**0–9**)  
+- 🖼️ **Data Type:** Grayscale images  
+- 📐 **Image Size:** \(28 \times 28\) pixels  
+- 🧮 **Input Features:** 784 (when flattened)
 
 ---
 
-## Tools & Technologies
+## 🛠️ Tools & Technologies
 
-- **PyTorch** – Core framework for building and training the neural network  
-- **Torchvision** – Used for dataset downloading and image transformations  
-- **Python** – Base programming language  
+- 🔥 **PyTorch** – Core framework for building and training the neural network  
+- 🧰 **Torchvision** – Dataset downloading and image transformations  
+- 🐍 **Python** – Base programming language  
 
 ---
 
-## Progress Involved
+## 🚧 Progress Involved
 
-### 1. Loading the Data
+### 1️⃣ Loading the Data
 - Imported the MNIST dataset
-- Applied image transformations using:
+- Applied image transformations:
   - `ToTensor()` to convert images into tensors
 - Split the dataset into:
-  - Training set
-  - Testing set
+  - 🏋️ Training set
+  - 🧪 Testing set
 - Used `DataLoader` for:
   - Efficient batching
-  - Shuffling the data
+  - Data shuffling
 
 ---
 
-### 2. Building the Model
+### 2️⃣ Building the Model
 - Created a custom model class inheriting from `nn.Module`
 - **Layers:**
   - Used `nn.Linear` layers for feature processing
 - **Activation Function:**
-  - Integrated **ReLU (Rectified Linear Unit)** between layers for non-linearity
+  - Integrated **ReLU (Rectified Linear Unit)** ⚡ for non-linearity
 - **Forward Function:**
-  - Defined how input data flows through layers to produce predictions
+  - Defined how data flows through the network to generate predictions
 
 ---
 
-### 3. Defining Training Logic
+### 3️⃣ Defining Training Logic
 - **Loss Function (Criterion):**
-  - Used `CrossEntropyLoss` to measure prediction error
+  - Used `CrossEntropyLoss` 📉 to measure prediction error
 - **Optimizer:**
-  - Selected optimization algorithms such as:
+  - Used optimization algorithms such as:
     - SGD
-    - Adam  
+    - Adam ⚙️  
   - Responsible for updating model weights
 
 ---
 
-### 4. Training the Model
-- Trained the model for a defined number of epochs (`n_epochs`)
+### 4️⃣ Training the Model
+- Trained the model for a fixed number of epochs (`n_epochs`)
 - For each batch:
-  1. Forward pass to predict outputs
-  2. Compute loss
-  3. Backpropagation using `loss.backward()`
-  4. Update weights using the optimizer
+  1. 🔮 Forward pass (prediction)
+  2. 📉 Loss computation
+  3. 🔁 Backpropagation using `loss.backward()`
+  4. 🔧 Weight updates using the optimizer
 
 ---
 
-### 5. Testing & Evaluation
+### 5️⃣ Testing & Evaluation
 - Loaded the test dataset
-- Passed test data through the trained model
-- Compared predicted labels with actual labels
-- Calculated final **accuracy percentage**
+- Passed test images through the trained model
+- Compared predicted labels with true labels
+- Calculated final **accuracy percentage** 📊
 
 ---
 
-### 6. Results
-- Accuracy of the newtork on the 10000 test images: 97.14%
+### 6️⃣ Results 🏆
+- ✅ **Accuracy on 10,000 test images:** **97.14%**
 
 ---
 
-## Key Learnings
+## 📚 Key Learnings
 
-- **Data Pipeline:**  
-  Understanding how to transform and batch raw image data for neural networks
-- **Model Architecture:**  
-  Designing structured models using `nn.Module`, linear layers, and activation functions
-- **Evaluation Process:**  
-  Differentiating between:
+- 🔄 **Data Pipeline:**  
+  Transforming and batching raw image data effectively
+- 🏗️ **Model Architecture:**  
+  Building structured models using `nn.Module`, linear layers, and activations
+- 📊 **Evaluation Process:**  
+  Understanding the difference between:
   - Training phase (with gradient computation)
-  - Testing phase (accuracy evaluation without gradients)
+  - Testing phase (evaluation without gradients)
 
 ---
